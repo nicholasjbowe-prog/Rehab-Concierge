@@ -1,0 +1,349 @@
+/* =========================
+   Luxury-Minimal Brand CSS
+   Palette: slate green, warm sand, burnt orange, muted gold, charcoal
+   ========================= */
+
+/* ---- CSS Reset (lightweight) ---- */
+*,
+*::before,
+*::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+button, input, textarea { font: inherit; }
+
+/* ---- Theme Tokens ---- */
+:root{
+  /* Neutrals */
+  --ink: #2B2B2B;          /* charcoal text */
+  --ink-2: #3A3A3A;        /* secondary text */
+  --paper: #FAF8F4;        /* warm off-white background */
+  --paper-2: #F3EEE6;      /* subtle section background */
+  --line: rgba(43,43,43,.12);
+
+  /* Brand Colors */
+  --green: #4F6F6A;        /* slate green */
+  --green-2: #3F5F5A;      /* deeper slate green */
+  --sand: #C8B8A6;         /* light brown / warm sand */
+  --orange: #C26A2E;       /* burnt orange */
+  --gold: #D4A933;         /* muted gold */
+
+  /* Effects */
+  --shadow: 0 10px 30px rgba(0,0,0,.08);
+  --shadow-soft: 0 8px 20px rgba(0,0,0,.06);
+  --radius: 16px;
+  --radius-sm: 12px;
+
+  /* Typography */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-serif: ui-serif, Georgia, "Times New Roman", Times, serif;
+
+  /* Layout */
+  --container: 1120px;
+  --pad: 24px;
+}
+
+/* ---- Base ---- */
+body{
+  font-family: var(--font-sans);
+  color: var(--ink);
+  background: var(--paper);
+  line-height: 1.55;
+  letter-spacing: .1px;
+}
+
+p{ margin: 0 0 1rem; color: var(--ink-2); }
+h1,h2,h3{ margin: 0; letter-spacing: -0.02em; }
+small{ color: rgba(43,43,43,.70); }
+
+::selection{
+  background: rgba(212,169,51,.25); /* gold tint */
+}
+
+/* ---- Layout Helpers ---- */
+.container{
+  max-width: var(--container);
+  margin: 0 auto;
+  padding: 0 var(--pad);
+}
+
+.section{
+  padding: clamp(56px, 7vw, 96px) 0;
+}
+
+.section--soft{
+  background: var(--paper-2);
+}
+
+.stack > * + *{ margin-top: 16px; }
+.stack-lg > * + *{ margin-top: 24px; }
+
+.max-hero{
+  max-width: 720px; /* luxury narrow lines */
+}
+
+.max-text{
+  max-width: 680px;
+}
+
+/* ---- Top Nav (optional) ---- */
+.nav{
+  position: sticky;
+  top: 0;
+  z-index: 40;
+  background: rgba(250,248,244,.85);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--line);
+}
+
+.nav__inner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 72px;
+}
+
+.brand{
+  display: inline-flex;
+  gap: 10px;
+  align-items: baseline;
+  font-weight: 650;
+  letter-spacing: .2px;
+}
+
+.brand__mark{
+  width: 10px; height: 10px;
+  border-radius: 999px;
+  background: var(--green);
+  box-shadow: 0 0 0 6px rgba(79,111,106,.12);
+}
+
+.nav__links{
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  color: rgba(43,43,43,.78);
+  font-weight: 520;
+}
+
+.nav__links a{
+  padding: 10px 8px;
+  border-radius: 10px;
+}
+
+.nav__links a:hover{
+  background: rgba(79,111,106,.08);
+  color: var(--ink);
+}
+
+/* ---- Hero ---- */
+.hero{
+  padding: clamp(72px, 9vw, 120px) 0 clamp(48px, 7vw, 88px);
+}
+
+.hero__grid{
+  display: grid;
+  gap: 36px;
+  align-items: center;
+  grid-template-columns: 1.2fr .8fr; /* copy + visual/cta space */
+}
+
+@media (max-width: 900px){
+  .hero__grid{ grid-template-columns: 1fr; }
+}
+
+.hero__kicker{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  color: rgba(43,43,43,.72);
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+.hero__kicker::before{
+  content: "";
+  width: 34px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 999px;
+  opacity: .9;
+}
+
+.hero__title{
+  font-family: var(--font-serif); /* gives “luxury” quickly */
+  font-weight: 650;
+  line-height: 1.06;
+  font-size: clamp(40px, 5vw, 64px);
+  color: var(--ink);
+}
+
+.hero__title span{
+  display: block; /* for stacked headline lines */
+}
+
+.hero__subtitle{
+  font-size: clamp(18px, 1.5vw, 22px);
+  line-height: 1.45;
+  color: var(--green-2);
+  max-width: 46ch;
+}
+
+.hero__body{
+  color: rgba(43,43,43,.78);
+  max-width: 64ch;
+}
+
+/* ---- Buttons ---- */
+.actions{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.btn{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+  font-weight: 650;
+  letter-spacing: .2px;
+  transition: transform .08s ease, box-shadow .18s ease, background .18s ease, border-color .18s ease;
+  cursor: pointer;
+  user-select: none;
+}
+
+.btn:active{ transform: translateY(1px); }
+
+.btn--primary{
+  background: var(--green);
+  color: #fff;
+  box-shadow: 0 12px 26px rgba(79,111,106,.18);
+}
+
+.btn--primary:hover{
+  background: var(--green-2);
+  box-shadow: 0 14px 32px rgba(79,111,106,.22);
+}
+
+.btn--secondary{
+  background: transparent;
+  color: var(--ink);
+  border-color: rgba(43,43,43,.18);
+}
+
+.btn--secondary:hover{
+  border-color: rgba(43,43,43,.28);
+  background: rgba(43,43,43,.04);
+}
+
+.link{
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+  font-weight: 650;
+  color: var(--ink);
+  padding-bottom: 3px;
+  border-bottom: 2px solid rgba(194,106,46,.65); /* orange underline */
+}
+
+.link:hover{
+  border-bottom-color: var(--orange);
+}
+
+/* ---- Cards / Blocks ---- */
+.card{
+  background: #fff;
+  border: 1px solid rgba(43,43,43,.10);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-soft);
+  padding: 18px;
+}
+
+.card--soft{
+  background: rgba(200,184,166,.16); /* sand tint */
+  border-color: rgba(200,184,166,.35);
+}
+
+.card__title{
+  font-weight: 700;
+  letter-spacing: -.01em;
+  margin-bottom: 6px;
+}
+
+.badge{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(212,169,51,.14); /* gold tint */
+  border: 1px solid rgba(212,169,51,.25);
+  color: rgba(43,43,43,.86);
+  font-weight: 650;
+  font-size: 13px;
+}
+
+/* ---- Grids ---- */
+.grid-3{
+  display: grid;
+  gap: 14px;
+  grid-template-columns: repeat(3, 1fr);
+}
+@media (max-width: 900px){
+  .grid-3{ grid-template-columns: 1fr; }
+}
+
+/* ---- Lists ---- */
+.list{
+  margin: 0;
+  padding-left: 18px;
+  color: rgba(43,43,43,.78);
+}
+.list li{ margin: 8px 0; }
+
+/* ---- Divider ---- */
+.divider{
+  height: 1px;
+  background: var(--line);
+  margin: 28px 0;
+}
+
+/* ---- Footer ---- */
+.footer{
+  padding: 36px 0;
+  border-top: 1px solid var(--line);
+  background: rgba(200,184,166,.10);
+}
+
+.footer__inner{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: center;
+  justify-content: space-between;
+  color: rgba(43,43,43,.72);
+  font-size: 14px;
+}
+
+/* ---- Focus States (Accessibility, still clean) ---- */
+:focus-visible{
+  outline: 3px solid rgba(212,169,51,.45); /* gold ring */
+  outline-offset: 3px;
+  border-radius: 10px;
+}
+
+/* ---- Optional: Subtle background texture using gradients ---- */
+.bg-glow{
+  background:
+    radial-gradient(900px 500px at 20% 10%, rgba(79,111,106,.14), transparent 60%),
+    radial-gradient(700px 450px at 80% 20%, rgba(194,106,46,.10), transparent 60%),
+    radial-gradient(650px 420px at 60% 90%, rgba(212,169,51,.10), transparent 60%);
+}
