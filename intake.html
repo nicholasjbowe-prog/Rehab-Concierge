@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intake | Concierge Rehab</title>
+  <meta name="description" content="Concierge rehab intake form." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html"><span class="brand__mark"></span><span>Concierge Rehab</span></a>
+      <nav class="nav__links">
+        <a href="library.html">Library</a>
+        <a href="services.html">Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="schedule.html" class="nav__cta">Schedule</a>
+      </nav>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+    <div class="nav__mobile" hidden>
+      <a href="library.html">Library</a>
+      <a href="services.html">Services</a>
+      <a href="intake.html">Intake</a>
+      <a href="experience.html">Experience</a>
+      <a href="research.html">Research</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="schedule.html">Schedule</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="pagehead">
+        <h1 class="h1">Intake</h1>
+        <p class="muted max-text">
+          This form helps me understand your story and constraints so we can move efficiently.
+        </p>
+      </div>
+
+      <!-- Replace action with Formspree endpoint if you want it to email you -->
+      <!-- Example: action="https://formspree.io/f/XXXXXX" -->
+      <form class="form card" action="#" method="post">
+        <div class="grid-2">
+          <label class="field">
+            <span class="field__label">Name</span>
+            <input class="input" name="name" required />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Email</span>
+            <input class="input" type="email" name="email" required />
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label class="field">
+            <span class="field__label">Body region</span>
+            <select class="input" name="region" required>
+              <option value="">Select…</option>
+              <option>Spine</option>
+              <option>Shoulder</option>
+              <option>Hip</option>
+              <option>Knee</option>
+              <option>Foot &amp; Ankle</option>
+              <option>Multiple</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">Primary goal</span>
+            <input class="input" name="goal" placeholder="e.g., return to running, lift pain-free, post-op progression" required />
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label class="field">
+            <span class="field__label">Did you have surgery?</span>
+            <select class="input" name="surgery">
+              <option>No</option>
+              <option>Yes</option>
+              <option>Not sure</option>
+            </select>
+          </label>
+
+          <label class="field">
+            <span class="field__label">If yes: what surgery?</span>
+            <input class="input" name="surgery_type" placeholder="e.g., ACL reconstruction, labrum, meniscus, fusion" />
+          </label>
+        </div>
+
+        <div class="grid-2">
+          <label class="field">
+            <span class="field__label">When was your surgery/injury?</span>
+            <input class="input" name="timeline" placeholder="e.g., Jan 2026 / 6 weeks ago / 9 months" />
+          </label>
+
+          <label class="field">
+            <span class="field__label">Have you been to PT before?</span>
+            <select class="input" name="prior_pt">
+              <option>No</option>
+              <option>Yes</option>
+              <option>A little</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="field">
+          <span class="field__label">What’s getting in the way right now?</span>
+          <textarea class="input" name="constraints" rows="4" placeholder="Time, pain flare-ups, uncertainty, travel, workload, etc."></textarea>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Training & activity background</span>
+          <textarea class="input" name="training" rows="4" placeholder="What do you do now? What do you want to return to?"></textarea>
+        </label>
+
+        <div class="actions">
+          <button class="btn btn--primary" type="submit">Submit intake</button>
+          <a class="btn btn--secondary" href="schedule.html">Schedule instead</a>
+        </div>
+
+        <p class="muted" style="margin-top: 12px;">
+          Note: This is a static website. To receive submissions, connect this form to Formspree or similar.
+        </p>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Dr. Nick</div>
+      <div class="footer__links">
+        <a href="services.html">Services</a>
+        <a href="schedule.html">Schedule</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
