@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Library | Concierge Rehab</title>
+  <meta name="description" content="Free rehab plans and educational PDFs by body region." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html"><span class="brand__mark"></span><span>Concierge Rehab</span></a>
+      <nav class="nav__links" aria-label="Primary">
+        <a href="library.html" aria-current="page">Library</a>
+        <a href="services.html">Services</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="schedule.html" class="nav__cta">Schedule</a>
+      </nav>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+    <div class="nav__mobile" hidden>
+      <a href="library.html">Library</a>
+      <a href="services.html">Services</a>
+      <a href="intake.html">Intake</a>
+      <a href="experience.html">Experience</a>
+      <a href="research.html">Research</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="schedule.html">Schedule</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="pagehead">
+        <h1 class="h1">Library</h1>
+        <p class="muted max-text">
+          Free PDFs, guides, and education. Use what you need. If you want phase-to-phase support, that option is here too.
+        </p>
+      </div>
+
+      <div class="toolbar card">
+        <label class="field">
+          <span class="field__label">Search</span>
+          <input id="search" class="input" type="search" placeholder="e.g., shoulder, ankle, return to run" />
+        </label>
+
+        <label class="field">
+          <span class="field__label">Filter</span>
+          <select id="filter" class="input">
+            <option value="all">All</option>
+            <option value="spine">Spine</option>
+            <option value="shoulder">Shoulder</option>
+            <option value="hip">Hip</option>
+            <option value="knee">Knee</option>
+            <option value="foot-ankle">Foot &amp; Ankle</option>
+          </select>
+        </label>
+      </div>
+
+      <h2 id="free" class="h2" style="margin-top: 22px;">Free Plans</h2>
+      <p class="muted max-text">Clear starting points you can download and use today.</p>
+
+      <div id="libraryGrid" class="grid-3" style="margin-top: 14px;">
+        <article class="card resource" data-tags="shoulder free">
+          <h3 class="card__title">Shoulder Reset — Basics</h3>
+          <p class="muted">A simple plan for reintroducing strength and tolerance.</p>
+          <div class="divider"></div>
+          <a class="link" href="assets/pdfs/sample-free-shoulder.pdf" target="_blank" rel="noopener">Download PDF →</a>
+        </article>
+
+        <article class="card resource" data-tags="knee free">
+          <h3 class="card__title">Knee Capacity Builder</h3>
+          <p class="muted">Progressions to build strength, control, and confidence.</p>
+          <div class="divider"></div>
+          <a class="link" href="assets/pdfs/sample-free-knee.pdf" target="_blank" rel="noopener">Download PDF →</a>
+        </article>
+
+        <article class="card resource" data-tags="spine free">
+          <h3 class="card__title">Spine Basics: Pain &amp; Load</h3>
+          <p class="muted">Education + a simple structure to calm symptoms and rebuild.</p>
+          <div class="divider"></div>
+          <a class="link" href="#" aria-disabled="true">PDF coming soon</a>
+        </article>
+      </div>
+
+      <div class="divider" style="margin: 34px 0;"></div>
+
+      <h2 class="h2">Want guidance?</h2>
+      <p class="muted max-text">
+        If you want phase-to-phase structure, checkpoints, and direct communication, start with a consult.
+      </p>
+
+      <div class="grid-3" style="margin-top: 14px;">
+        <article class="card">
+          <h3 class="card__title">Phase-to-Phase Guidance</h3>
+          <p class="muted">Direct communication + evolving program. Built around your timeline.</p>
+          <div class="divider"></div>
+          <a class="link" href="services.html#guided">See details →</a>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Criteria-Based Plan</h3>
+          <p class="muted">Progress based on measurable checkpoints and objective criteria.</p>
+          <div class="divider"></div>
+          <a class="link" href="services.html#criteria">See details →</a>
+        </article>
+
+        <article class="card">
+          <h3 class="card__title">Biomechanics Review</h3>
+          <p class="muted">Consultation to review movement, loading, and performance strategy.</p>
+          <div class="divider"></div>
+          <a class="link" href="services.html#biomech">See details →</a>
+        </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Dr. Nick</div>
+      <div class="footer__links">
+        <a href="index.html">Home</a>
+        <a href="schedule.html">Schedule</a>
+        <a href="intake.html">Intake</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
