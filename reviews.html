@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Reviews | Concierge Rehab</title>
+  <meta name="description" content="Client reviews and outcomes." />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="index.html"><span class="brand__mark"></span><span>Concierge Rehab</span></a>
+      <nav class="nav__links">
+        <a href="library.html">Library</a>
+        <a href="services.html">Services</a>
+        <a href="reviews.html" aria-current="page">Reviews</a>
+        <a href="schedule.html" class="nav__cta">Schedule</a>
+      </nav>
+      <button class="nav__toggle" type="button" aria-label="Open menu" aria-expanded="false">☰</button>
+    </div>
+    <div class="nav__mobile" hidden>
+      <a href="library.html">Library</a>
+      <a href="services.html">Services</a>
+      <a href="intake.html">Intake</a>
+      <a href="experience.html">Experience</a>
+      <a href="research.html">Research</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="schedule.html">Schedule</a>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="pagehead">
+        <h1 class="h1">Reviews</h1>
+        <p class="muted max-text">
+          A few words from clients. (You can also link to your Google reviews below.)
+        </p>
+      </div>
+
+      <div class="grid-3">
+        <article class="card">
+          <p class="quote">“Structured, clear, and calm. I finally understood what to do and why.”</p>
+          <p class="muted">— Client, knee rehab</p>
+        </article>
+
+        <article class="card">
+          <p class="quote">“The plan fit into my life. Progress was measurable, not random.”</p>
+          <p class="muted">— Client, shoulder</p>
+        </article>
+
+        <article class="card">
+          <p class="quote">“Direct support + checkpoints made the process simple.”</p>
+          <p class="muted">— Client, spine</p>
+        </article>
+      </div>
+
+      <div class="divider" style="margin: 34px 0;"></div>
+
+      <div class="card card--soft">
+        <h2 class="h2">Google Reviews</h2>
+        <p class="muted max-text">
+          Static websites can’t automatically pull Google reviews without an API. The clean option is to link to your profile.
+        </p>
+        <a class="btn btn--primary" href="#" target="_blank" rel="noopener">View on Google</a>
+        <p class="muted" style="margin-top: 12px;">
+          Replace the “#” link with your Google Business review link.
+        </p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>© <span id="year"></span> Dr. Nick</div>
+      <div class="footer__links">
+        <a href="schedule.html">Schedule</a>
+        <a href="services.html">Services</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
